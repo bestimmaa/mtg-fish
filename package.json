@@ -1,0 +1,14 @@
+{
+  "name": "mtg-goldfish",
+  "version": "1.0.0",
+  "description": "Get the latest prices from mtggoldfish.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christoph Halang",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  }
+}
