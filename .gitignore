@@ -1,1 +1,7 @@
 node_modules
+buffer.json
+modern.json
+standard.json
+legacy.json
+pauper.json
+vintage.json

@@ -1,7 +1,7 @@
 {
-  "name": "mtg-goldfish",
-  "version": "1.0.0",
-  "description": "Get the latest prices from mtggoldfish.com",
+  "name": "mtg-fish",
+  "version": "0.1.0",
+  "description": "Get the latest prices from mtggoldfish.com's 'Movers and Shakers' section",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
