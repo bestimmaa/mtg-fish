@@ -1,5 +1,5 @@
 {
-  "name": "mtg-goldfish",
+  "name": "mtg-fish",
   "version": "0.1.0",
   "description": "Get the latest prices from mtggoldfish.com's 'Movers and Shakers' section",
   "main": "index.js",
