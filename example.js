@@ -3,10 +3,11 @@ let mtgGoldfish = require('./index.js')
 // Daily winners
 mtgGoldfish.standard.then(cards => console.log(cards.slice(0, 10)))
 
-mtgGoldfish.pauper.then(cards => console.log(cards.slice(0, 10)))
+// Daily losers
+mtgGoldfish.pauper.then(cards => console.log(cards.slice(10, 20)))
 
-mtgGoldfish.legacy.then(cards => console.log(cards.slice(0, 10)))
+// Weekly winner
+mtgGoldfish.legacy.then(cards => console.log(cards.slice(20, 30)))
 
-mtgGoldfish.modern.then(cards => console.log(cards.slice(0, 10)))
-
-mtgGoldfish.vintage.then(cards => console.log(cards.slice(0, 10)))
+// Weekly losers
+mtgGoldfish.modern.then(cards => console.log(cards.slice(30, 40)))
