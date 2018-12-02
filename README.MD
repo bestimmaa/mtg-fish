@@ -8,6 +8,10 @@ See *example.js*
 
 ## Version History
 
+### 0.3.0
+
+- Configurable TTL for cache
+
 ### 0.2.0
 
 - Custom caching

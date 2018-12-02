@@ -31,8 +31,10 @@ let exampleCacheRead = (format) => {
   })
 }
 
-// Assign the cache functions (optional). If not configured a default file based cache is used
+// Optional: Assign the cache functions. If not configured a default file based cache is used
 mtgGoldfish.configureCache(exampleCacheRead, exampleCacheWrite)
+// Optional: Set the time in seconds until cached data expires (in seconds). Default 800 seconds
+mtgGoldfish.setCacheTTL(240)
 
 // Get all cards from movers and shakers section for a format
 //

@@ -19,10 +19,16 @@ let regex = new RegExp(regexStringValue, '')
 var cacheRead = fileSystemCache.fileSystemRead
 // Store to cache with  (format) => {...}
 var cacheWrite = fileSystemCache.fileSystemStore
+// How long should cached data kept around in seconds
+var cacheTimeToLive = 800
 
 let configureCache = (read, write) => {
   cacheRead = read
   cacheWrite = write
+}
+
+let setCacheTTL = (time) => {
+  cacheTimeToLive = time
 }
 
 let parseCards = (body) => {
@@ -58,8 +64,8 @@ let movers_shakers = (format) => {
   return new Promise((resolve, reject) => {
     console.log(`Requesting winners / losers for ${format}`)
     cacheRead(format).then(buffer => {
-      let bufferAge = (Date.now() - buffer.date) / 1000.0
-      if (bufferAge < 60) {
+      let cacheAge = (Date.now() - buffer.date) / 1000.0
+      if (cacheAge < cacheTimeToLive) {
         console.log(`Cache is fresh. Using cached response for ${format}`)
         resolve(buffer.cards)
       } else {
@@ -80,5 +86,6 @@ let movers_shakers = (format) => {
 module.exports = {
   formats,
   movers_shakers,
-  configureCache
+  configureCache,
+  setCacheTTL
 }
